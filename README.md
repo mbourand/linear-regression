@@ -1,5 +1,5 @@
 # Linear Regression
-<img src="https://github.com/mbourand/linear-regression/blob/master/images/illustration.jpg?raw=true">
+<p align="center"><img src="https://github.com/mbourand/linear-regression/blob/master/images/illustration.jpg?raw=true"></p>
 
 ## Description
 This repo contains a simple **linear regression algorithm** predicting the price of a car based on the amount of kilometers it has.
