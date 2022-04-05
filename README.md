@@ -8,7 +8,7 @@ You can use any dataset you want, as long as it is in the correct format.
 You can look at the default dataset in ``resources/data.csv``.
 
 ## Installation
-```
+```Bash
 python3 -m venv venv # Creates a virtual environment (optionnal but recommended)
 source venv/bin/activate # Activates the virtual environment (Use only if you created the virtual environment)
 pip install -r requirements.txt # Installs the required packages
@@ -16,7 +16,7 @@ chmod +x *.sh # Adds execution permission for the launching scripts
 ```
 
 ## Usage
-```
+```Bash
 ./trainer.sh # Launches the training script and exports the results to resources/thetas.csv
 ./finder.sh # Launches the prediction script using the thetas.csv values
 ```
