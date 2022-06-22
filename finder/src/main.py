@@ -3,17 +3,20 @@ import sys
 sys.path.append('.')
 
 import shared.src.csv_reader as csv_reader
+import os
 
 def main():
-	thetas = csv_reader.read_csv('resources/thetas.csv')[0]
-	if len(thetas) != 2:
-		print("Error: Invalid thetas.csv", file=sys.stderr)
-		exit(1)
-	try:
-		thetas = [float(x) for x in thetas]
-	except ValueError:
-		print("Error: Invalid thetas.csv", file=sys.stderr)
-		exit(1)
+	thetas = [0, 0]
+	if os.path.exists('resources/thetas.csv'):
+		thetas = csv_reader.read_csv('resources/thetas.csv')[0]
+		if len(thetas) != 2:
+			print("Error: Invalid thetas.csv", file=sys.stderr)
+			exit(1)
+		try:
+			thetas = [float(x) for x in thetas]
+		except ValueError:
+			print("Error: Invalid thetas.csv", file=sys.stderr)
+			exit(1)
 
 	while True:
 		km = input("Please enter the amount of kilometers: ")
