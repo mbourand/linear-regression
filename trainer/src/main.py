@@ -16,9 +16,9 @@ def main():
 	data = data_validator.format_data(data)
 	normalized_data = data_validator.normalize_data(data)
 	theta0, theta1 = trainer.linear_regression(normalized_data)
-	theta0, theta1 = data_validator.denormalize_thetas(theta0, theta1, data, normalized_data, trainer.estimate)
-
+	theta0, theta1 = data_validator.denormalize_thetas(theta0, theta1, data)
 	print(f"Theta 0: {theta0}\nTheta 1: {theta1}\n")
+
 
 	with open('resources/thetas.csv', 'w+') as thetas_file:
 		thetas_file.write(f"{theta0},{theta1}\n")
