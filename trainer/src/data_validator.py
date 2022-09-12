@@ -31,7 +31,6 @@ def denormalize_thetas(theta0, theta1, data):
 	prices = [row[1] for row in data]
 
 	spans = [max(col) - min(col) for col in [kilometers, prices]]
-	print(spans)
 	theta1 = theta1 * spans[1] / spans[0]
 	theta0 = theta0 * spans[1] + min(prices) - theta1 * min(kilometers)
 

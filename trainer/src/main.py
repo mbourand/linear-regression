@@ -19,6 +19,8 @@ def main():
 	theta0, theta1 = data_validator.denormalize_thetas(theta0, theta1, data)
 	print(f"Theta 0: {theta0}\nTheta 1: {theta1}\n")
 
+	avg_err = sum(abs(trainer.estimate(row[0], theta0, theta1) - row[1]) for row in data) / len(data)
+	print(f"Average error: ${round(avg_err, 2)}")
 
 	with open('resources/thetas.csv', 'w+') as thetas_file:
 		thetas_file.write(f"{theta0},{theta1}\n")
