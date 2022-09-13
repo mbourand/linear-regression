@@ -1,6 +1,8 @@
 import shared.src.validator as validator
 
 def validate(data):
+	if len(data) == 0:
+		return False
 	try:
 		for row in data:
 			if len(row) != 2 or not validator.validate_price(int(row[0])) or not validator.validate_km(int(row[1])):
