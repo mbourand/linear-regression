@@ -1,1 +1,1 @@
-python finder/src/main.py
+python predict/src/main.py

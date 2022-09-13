@@ -7,6 +7,12 @@ def validate(data):
 				return False
 	except ValueError:
 		return False
+	for j in range(len(data[0])):
+		column = [data[i][j] for i in range(len(data))]
+		min_value = min(column)
+		max_value = max(column)
+	if min_value == max_value:
+		return False
 	return True
 
 def normalize_data(data):
