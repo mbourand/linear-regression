@@ -23,7 +23,7 @@ def main():
 		try:
 			km = float(km)
 			if km < 0:
-				print("Invalid amount of kilometers: ", file=sys.stderr)
+				print("Invalid amount of kilometers", file=sys.stderr)
 				continue
 			break
 		except ValueError:
